@@ -16,6 +16,7 @@ a.skip:focus {
     left:10px;
     border: 2px dotted #1C567D;
 }
+
 nav a:focus {
     outline: none;
     border: 2px dotted #1C567D;
@@ -24,7 +25,7 @@ nav a:focus {
 
 *:focus {
     outline: none;
-    border: 2px dotted #1C567D;
+    /* border: 2px dotted #1C567D; */
     border-radius: 5px;
 }
 
@@ -188,16 +189,13 @@ button {
 }
 
 /* GRID */
-.wrapper, .wrapper2 {
+.wrapper {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: auto;
-    justify-content: center;
-    margin-bottom: 5rem;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
 }
 
-.chatime_purple, .dingtea_slogan, .slogan_lightbold, 
-.bubbletea_store_quickly, .bubbletea_store_yaya {
+.chatime_purple, .dingtea_slogan, .slogan_lightbold {
     font-weight: 700;
 }
 
@@ -206,14 +204,6 @@ button {
 }
 .chatime_purple{
     color: #4f1a6c;
-}
-
-.bubbletea_store_quickly {
-    color: #fd4800;
-}
-
-.bubbletea_store_yaya {
-    color: #247028;
 }
 .bobateahouse_img, .chatime_img, .coco_img, .dingtea_img,
 .quickly_img, .sharetea_img, .sweeting_img, .teaninja_img, .unitea_img {
@@ -225,6 +215,7 @@ button {
 .bobateahouse_title, .chatime_title, .coco_title, .dingtea_title,
 .quickly_title, .sharetea_title, .sweeting_title, .teaninja_title, .unitea_title {
     grid-column: 1 / -1;
+    ;
 }
 
 .bubbleology_img, .gongcha_img, .kungfutea_img, .tigersugar_img,
@@ -237,6 +228,7 @@ button {
 .bubbleology_img, .gongcha_img, .kungfutea_img, .tigersugar_img,
 .vivi_img, .yaya_img {
     grid-column: 1 / -1;
+    ;
 }
 
 
@@ -247,8 +239,8 @@ button {
     font-weight: 800;
 }
 
-a.bubbletea_store_yaya:link, a.bubbletea_store_yaya:visited{
-    color: #247028;
+a.bubbletea_store_gongcha:link, a.bubbletea_store_gongcha:visited{
+    color: #e50000;
     font-weight: 800;
 }
 
@@ -278,50 +270,120 @@ footer {
     
 }
 
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+.container .inner .panel.panel-right {
+    margin-right: -10%;
+    background: #1B1B1B;
   }
   
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #1C567D;
-    color: white;
-    padding: 12px 20px;
+  .container .inner .panel.panel-right .panel-content .form {
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    width: 300px;
+    min-height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-25%);
+  }
+  
+  .container .inner .panel.panel-right .panel-content .form h1 {
+    display: block;
+    margin: 0 0 45px 0;
+    color: #B1B1B1;
+    font-weight: 200;
+    font-size: 18px;
+  }
+  
+  .group { 
+    position: relative; 
+    margin-bottom: 25px; 
+  }
+  
+  input {
+    font-size: 2rem;
+    height: 6rem;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    
-  }
-   #subject {
-    height: 20rem;
-  }
-
-  ::placeholder, select {
-    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border-bottom: 1px solid #B1B1B1;
+    color: #B1B1B1;
+    background: rgba(0,0,0,0);
+    opacity: 0.5;
+    transition: 0.2s ease;
   }
   
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #9e6429;
+  input:focus {
+    outline: none;
+    opacity: 1;
   }
   
-  /* Add a background color and some padding around the form */
-  .container {
-    border-radius: 5px;
-    /* background-color: white; */
-    padding: 20px;
+  label {
+    color: black; 
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 15px;
+    opacity: 0.5;
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
   }
-
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top: -10px;
+    font-size: 12px;
+    color: #B1B1B1;
+    opacity: 1;
+  }
+  
+  .highlight {
+    position: absolute;
+    height: 60%; 
+    width: 100px; 
+    top: 25%; 
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from { background:#B1B1B1; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+    from { background:#B1B1B1; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+    from { background:#B1B1B1; }
+    to 	{ width:0; background:transparent; }
+  }
+  
+  a.send-btn {
+    float: right;
+    color: #B1B1B1;
+    transition: 0.2s ease;
+  }
+  
+  a.send-btn:hover {
+    color: #FAFAFA;
+    cursor: pointer;
+  }
+  
+ 
 @media screen and (prefers-reduced-motion: reduce){
 /*Turn off scroll*/
 html{
@@ -363,20 +425,5 @@ header{
     .nav_item{
         padding: 10px;
         font-size: 1.1rem;
-    }
-    .wrapper {
-        display: grid;
-        grid-gap: 6rem;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        justify-content: center;
-      }
-
-    .wrapper2{
-        display: grid;
-        grid-gap: 6rem;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto;
-        justify-content: center;
     }
 }
