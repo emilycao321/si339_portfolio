@@ -16,18 +16,21 @@
 </head>
 <body class="home">
 	<a class = "skip" href="#main">Skip to Main Content</a>
-	<nav>
-		<ul class = "nav_links">
-			<li class="nav_item"><a href = "index.html">Home</a></li>
-			<li class="nav_item"><a href = "annarbor_boba.html">Ann Arbor</a></li>
-			<li class="nav_item"><a href = "newyork_boba.html" class = "active">New York City</a></li>
-			<li class="nav_item"><a href = "aboutme.html" >About Me</a></li>
-			<li class="nav_item"><a href = "contact.html" >Contact Me</a></li>
-		</ul>
-	</nav>
-	<header id = "main">
-		<h1>New York City Bobas</h1>
+	<header>
+		<a href = "index.html"><img class = "bobaflow_logo" src = "img/bobaflow.png" alt ="Bobflow Logo"></a>
+		<nav>
+			<ul class = "nav_links">
+				<li class="nav_item"><a href = "index.html" class = "active">Home</a></li>
+				<li class="nav_item"><a href = "annarbor_boba.html">Ann Arbor</a></li>
+				<li class="nav_item"><a href = "newyork_boba.html">New York City</a></li>
+				<li class="nav_item"><a href = "aboutme.html">About Me</a></li>
+				<li class="nav_item"><a href = "contact.html" >Contact</a></li>
+			</ul>
+		</nav>
 	</header>
+	<div id = "main">
+		<h1>New York City Bobas</h1>
+	</div>
 
 	<main>
 		<p class="boba_subtext">Growing up in New York City as an Asian/American, I have explored and tasted a variety of bubble tea from different places. 
@@ -35,8 +38,7 @@
 			I haven't tried all the bubble tea stores in New York City, but below are my favorite stores.
 		</p><br>
 			<div class="nyc">  
-				<div class="wrapper2">
-					<div class = "nyc_boba">
+				<div class="wrapper">
 						<div class="bubbleology_img">
 							<!--https://www.facebook.com/bubbleology/posts/have-you-tried-our-new-premium-utopian-specials-yet-mermaid-and-genie-specialsav/2257357317644906/-->
 						<img src="img/nyc/bubbleology.jpeg" alt="NYC Bubbleology" />
@@ -68,8 +70,6 @@
 								<button class="btn" onclick=" window.open('https://food.google.com/chooseprovider?restaurantId=/g/11ggw0ngy7&g2lbs=ALgbXSqxA2HWCaR4BNCnSJwc0icmbK7wLEvUaJ5txkr9ko291f_gJ797EoKesjWPVQ9BbzoW85bc&hl=en-US&gl=us&cs=1&ssta=1&fo_m=MfohQo559jFvMWwP9igWZeWQMczq7voErUdXMT_RFPQ05bfKMQVr5-7IofUJMU_hT8vrWuwRMUOzJVpjPL1YMfaXTPp5KXh-OAE%3D&gei=X9SEYYvNJ42pqtsPoqmb-AE&fo_s=OA,AH&orderType=2&sei=CWxiPUfbkJqiERUz_m2Rar7X&utm_campaign&utm_source=search','_blank')">Order Online</button>
 							</div>
 						</div>
-					</div>
-					<div class = "nyc_boba">
 						<div class="gongcha_img">
 							<!--https://www.yelp.com/biz_photos/gong-cha-new-york-9?select=To7KdlF2VmbqiV0WnpzR6g-->
 						<img src="img/nyc/gongchanyc.jpeg" alt="NYC Gong Cha" />
@@ -105,8 +105,6 @@
 								
 							</div>
 						</div>
-					</div>
-					<div class = "nyc_boba">
 						<div class="kungfutea_img">
 							<!--https://www.yelp.com/biz_photos/kung-fu-tea-new-york-31?select=8NK-1I4IEJ_oOg57f03FWw-->
 						<img src="img/nyc/kungfutea2.jpeg" alt="NYC Kung Fu Tea" />
@@ -140,8 +138,6 @@
 								<button class="btn" onclick=" window.open('https://food.google.com/chooseprovider?restaurantId=/g/11b5vtcqwc&g2lbs=ALgbXSoxXciB0ziVI7PjD_9-OdCw_-DseYogI_XP3SZF5cXYBfzsD6NGQxWXbfI5psyeLreyqdOZ&hl=en-US&gl=us&cs=1&ssta=1&fo_m=MfohQo559jFvMWwP9igWZeWQMczq7voErUdXMT_RFPQ05bfKMQVr5-7IofUJMU_hT8vrWuwRMUOzJVpjPL1YMfaXTPp5KXh-OAE%3D&gei=ZtmEYemyMZSC9PwPuNyniAk&fo_s=OA,AH&sei=CUXZv46HzcuPEdLYChdzop7j&utm_campaign&utm_source=search','_blank')"> Order Here </button>
 							</div>
 						</div>
-					</div>
-					<div class = "nyc_boba">
 						<div class="tigersugar_img">
 							<!--https://www.yelp.com/biz_photos/tiger-sugar-new-york?select=BQa6AQaBSesPX8shjzjY3w-->
 						<img src="img/nyc/tigersugar.jpeg" alt="NYC Tigery Sugar" />
@@ -177,8 +173,6 @@
 								<button class="btn" onclick=" window.open('https://order.snackpass.co/Tiger-Sugar-197-Canal-St-5f0652c254dac8009d258c17?openAddressSelectorIfChain=true','_blank')"> Order on Snackpass </button>
 							</div>
 						</div>
-					</div>
-					<div class = "nyc_boba">
 						<div class="vivi_img">
 							<!--https://www.facebook.com/vivibubbleteanyc/photos/2532970276788150-->
 						<img src="img/nyc/vivi_nyc.jpeg" alt="NYC Vivi" />
@@ -211,8 +205,6 @@
 								<button class="btn" onclick=" window.open('https://food.google.com/chooseprovider?restaurantId=/g/1tfkghd2&g2lbs=ALgbXSoChR5QUpt8XQ3_qtpdPnGhOeG3XPz1XdLYP5adhicHkSnVI9N8aayAPwiNRdBuz-VLBWF5&hl=en-US&gl=us&cs=1&ssta=1&fo_m=MfohQo559jFvMWwP9igWZeWQMczq7voErUdXMT_RFPQ05bfKMQVr5-7IofUJMU_hT8vrWuwRMUOzJVpjPL1YMfaXTPp5KXh-OAE%3D&gei=ctqEYdanI9qrtQaf9arACw&fo_s=OA,AH&orderType=2&sei=CftFGwty27yEEYPI1XVbAa9D&utm_campaign&utm_source=search','_blank')"> Order Here </button>
 							</div>
 						</div>
-					</div>
-					<div class = "nyc_boba">
 						<div class="yaya_img">
 							<!--https://www.yelp.com/biz_photos/yaya-tea-garden-new-york-6?select=ClqpDJqhHPH1BqGKr2bYmQ-->
 						<img src="img/nyc/yaya.jpeg" alt="NYC Yaya" />
@@ -249,7 +241,6 @@
 						</div>
 					</div>	
 				</div>
-			</div>
 	  
 	</main>
 
