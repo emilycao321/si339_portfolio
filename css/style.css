@@ -178,6 +178,9 @@ p.bobastore_text {
     text-indent: -0.75rem;
 }
 
+.top3 {
+    z-index: -1;
+}
 .top3 li:before {
     content: "🧋 "
 }
