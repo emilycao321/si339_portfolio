@@ -48,10 +48,10 @@ nav li{
 
 .nav_links {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: left;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
 }
 
 nav{
@@ -123,9 +123,12 @@ p.advisory{
 }
 
 .home_emily {
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
 }
-
+.home_emily2 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;;
+}
 .contact_emily {
     padding-bottom: 40px;
     padding-top: 40px;
@@ -137,9 +140,9 @@ p.boba_subtext {
     padding-bottom: 20px;
 }
 
-.annarbor_boba, .nyc_boba {
+/* .annarbor_boba, .nyc_boba {
     margin-bottom: 75px;
-}
+} */
 
 p.bobastore_text {
     font-size: 1rem;
@@ -197,8 +200,7 @@ button {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: auto;
-    justify-content: center;
-    margin-bottom: 5rem;
+    justify-content: center; 
 }
 
 .chatime_purple, .dingtea_slogan, .slogan_lightbold, 
@@ -261,9 +263,14 @@ a.aboutme_umich:hover{
     color: #e7820f;
 
 }
-.about-image {
+.about_image {
     padding-top: 10px;
     padding-bottom: 20px;
+}
+
+.city-image {
+    padding-top: 1rem;
+    padding-bottom:  2rem;;
 }
 
 p.padtop_advisory {
@@ -278,7 +285,7 @@ p.padtop_advisory {
 
 /* footer */
 footer {
-    padding-top: 20vh;
+    padding-top: 15vh;
     text-align: center;
     
 }
@@ -344,8 +351,24 @@ header{
     background-attachment: initial;
 }
 }
-/* large screen */
-@media screen and (min-width: 850px){
+/* tablet screen */
+@media screen and (min-width: 750px){
+    header > a {
+        width: 25%;
+    }
+    /* .bobaflow_logo {
+        width: 40%;
+    } */
+    header {
+        position: sticky;
+        background: #fef6ed;
+        top: 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
     nav {
         display: flex;
         flex-direction: row;
@@ -366,22 +389,138 @@ header{
     }
 
     .nav_item{
-        padding: 10px;
-        font-size: 1.1rem;
+        padding: 1.2vw;
+        font-size: .9rem;
     }
     .wrapper {
         display: grid;
-        grid-gap: 6rem;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        justify-content: center;
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(9,auto)
+        
       }
 
-    .wrapper2{
-        display: grid;
-        grid-gap: 6rem;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto;
+    .bobateahouse_title, .chatime_title, .coco_title, .dingtea_title, .quickly_title, .sharetea_title, .sweeting_title, .teaninja_title, .unitea_title {
+        grid-column: 2/ span 1;
+        padding-bottom: 5vh;;
+    }
+
+    .bobateahouse_img, .chatime_img, .coco_img, .dingtea_img, .quickly_img, .sharetea_img, .sweeting_img, .teaninja_img, .unitea_img{
+        grid-column: 1 / span 1;
+        overflow: hidden;
+        display: flex;
         justify-content: center;
+        align-items: flex-start;
+    }
+
+    .bubbleology_title, .gongcha_title, .kungfutea_title, .tigersugar_title, .vivi_title, .yaya_title {
+        grid-column: 2/ span 1;
+    }
+
+    .bubbleology_img, .gongcha_img, .kungfutea_img, .tigersugar_img, .vivi_img, .yaya_img{
+        grid-column: 1 / span 1;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #about_head {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .aboutme {
+        grid-column: 2/ span 1;
+    }
+
+    .city-image {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    #home_head {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        }
+    #home_head2 {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+    .home_emily {
+        grid-column: 1/ span 1;
+        grid-row: 1/-1
+    }
+    .home_text {
+        grid-column: 2/ span 1;
+    }
+
+    .home_emily, .home_emily2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home_emily img {
+        padding-top: 0;
+        width: auto; /* width of container */
+        height: 25rem; /* height of container */
+        object-fit: cover;
+        object-position: 40% 0;
+    }
+
+
+    .home_emily2 img{
+        padding-top: 0;
+        width: auto; /* width of container */
+        height: 28rem; /* height of container */
+        object-fit: cover;
+        object-position: 60% 0;
+    } 
+
+    #contact_head {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        }
+    .contact_emily {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+
+        .container {
+            padding: 0;
+        }
+    footer {
+        padding-top: 10vh;
     }
 }
