@@ -7,24 +7,24 @@ a.skip {
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
-    border: 2px dotted #1C567D;
+    border: 4px dotted #9e6429;
     border-radius: 5px;
 }
 
 a.skip:focus {
     top:10px;
     left:10px;
-    border: 2px dotted #9e6429;
+    border: 4px dotted #9e6429;
 }
 nav a:focus {
     outline: none;
-    border: 2px dotted #9e6429;
+    border: 4px dotted #9e6429;
     border-radius: 5px;
 }
 
 *:focus {
     outline: none;
-    border: 2px dotted #9e6429;
+    border: 4px dotted #9e6429;
     border-radius: 5px;
 }
 
