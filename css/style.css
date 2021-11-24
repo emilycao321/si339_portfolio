@@ -14,17 +14,17 @@ a.skip {
 a.skip:focus {
     top:10px;
     left:10px;
-    border: 2px dotted #1C567D;
+    border: 2px dotted #9e6429;
 }
 nav a:focus {
     outline: none;
-    border: 2px dotted #1C567D;
+    border: 2px dotted #9e6429;
     border-radius: 5px;
 }
 
 *:focus {
     outline: none;
-    border: 2px dotted #1C567D;
+    border: 2px dotted #9e6429;
     border-radius: 5px;
 }
 
@@ -51,12 +51,12 @@ header {
 
 }
 
-nav {
+/* nav {
     display: flex;
     flex-direction: column;
     justify-content:left;
     align-items:left;
-}
+} */
 
 nav li{
     display:inline;
@@ -65,10 +65,10 @@ nav li{
 
 .nav_links {
     display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: right;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
 }
 
 nav{
@@ -216,7 +216,7 @@ button {
 }
 
 /* GRID */
-.wrapper, .wrapper2 {
+.wrapper {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: auto;
@@ -379,27 +379,7 @@ header{
     /* .bobaflow_logo {
         width: 40%;
     } */
-    header {
-        position: sticky;
-        background: #fef6ed;
-        top: 0px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
-    }
-    nav {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:right;
-        align-items:right;
-        align-content: flex-start;
-        left: 0;
-        right: 0;
-    }
-    
     .nav_links{
         display: flex;
         flex-wrap: wrap;
@@ -413,11 +393,9 @@ header{
         font-size: .9rem;
     }
     .wrapper {
-        display: grid;
         grid-gap: 2rem;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: repeat(9,auto)
-        
       }
 
     .bobateahouse_title, .chatime_title, .coco_title, .dingtea_title, .quickly_title, .sharetea_title, .sweeting_title, .teaninja_title, .unitea_title {
@@ -428,9 +406,6 @@ header{
     .bobateahouse_img, .chatime_img, .coco_img, .dingtea_img, .quickly_img, .sharetea_img, .sweeting_img, .teaninja_img, .unitea_img{
         grid-column: 1 / span 1;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
     }
 
     .bubbleology_title, .gongcha_title, .kungfutea_title, .tigersugar_title, .vivi_title, .yaya_title {
@@ -440,9 +415,6 @@ header{
     .bubbleology_img, .gongcha_img, .kungfutea_img, .tigersugar_img, .vivi_img, .yaya_img{
         grid-column: 1 / span 1;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
     }
 
     #about_head {
@@ -461,15 +433,9 @@ header{
     .city-image {
         padding-top: 1rem;
         padding-bottom: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .about_image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding-top: 0;
     }
 
@@ -530,9 +496,6 @@ header{
         padding-bottom: 2rem;
         }
     .contact_emily {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
         padding: 0;
     }
 
@@ -542,5 +505,12 @@ header{
         }
     footer {
         padding-top: 10vh;
+    }
+
+    /* desktop view */
+    @media screen and (min-width: 1024px){
+        .nav_item {
+            font-size: 1.2rem;
+        }
     }
 }
