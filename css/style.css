@@ -41,7 +41,7 @@ header > a {
     width: 40%;
 } */
 header {
-    position: sticky;
+    /* position: sticky; */
     background: #fef6ed;
     top: 0px;
     width: 100%;
@@ -379,7 +379,10 @@ header{
     /* .bobaflow_logo {
         width: 40%;
     } */
-
+    header {
+        position: sticky;
+    }
+    
     .nav_links{
         display: flex;
         flex-wrap: wrap;
